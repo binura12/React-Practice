@@ -1,5 +1,5 @@
-function Product(props) { 
-    let {name,price,specs} = props;
+function Product(props) {
+    let { name, price, specs } = props;
     
     return (
         <div className="product">

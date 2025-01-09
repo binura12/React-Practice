@@ -7,30 +7,40 @@ function App() {
 
   let [countries, setCountries] = useState(
     [
-      {name: "India", Capital: "New Delhi", population: "1.4B"},
-      {name: "Sri Lanka", Capital: "Sri Jayawaranapura", population: "20M"},
-      {name: "France", Capital: "Paris", population: "2.5B"},
-      {name: "Australia", Capital: "Canaberra", population: "67.5M"}
+      { name: "India", Capital: "New Delhi", population: "1.4B" },
+      { name: "Sri Lanka", Capital: "Sri Jayawaranapura", population: "20M" },
+      { name: "France", Capital: "Paris", population: "2.5B" },
+      { name: "Australia", Capital: "Canaberra", population: "67.5M" }
     ]
   )
+
+  function loadNewCountries() {
+    setCountries(
+      [
+        { name: "USA", Capital: "Washington D.C.", population: "331.7M" },
+        { name: "Canada", Capital: "Ottawa", population: "37.6M" },
+        { name: "Brazil", Capital: "Brasília", population: "212.5M" },
+        { name: "China", Capital: "Beijing", population: "1.4B" }
+      ]
+    )
+  }
 
   return (
     <div>
       <h1>Main Component</h1>
-      {/* <Product name="Iphone XR" price="71000/=" specs={{ram:"3GB",size:"19cm"}}/>
-      <Product name="Iphone 11" price="85000/=" specs={{ram:"3GB",size:"19cm"}}/>
-      <Product name="Iphone 14" price="285000" specs={{ram:"3GB",size:"19cm"}}/> */}
 
-      {/* mapping logic */}
+      <button onClick={loadNewCountries}>Load New Countries </button>
+
       {
-        countries.map((country)=>{
+        countries.map((country) => {
           return (
-            <Country name={country.name} Capital={country.Capital} population={country.population} key={country.name}/>
+            <Country name={country.name} Capital={country.Capital} population={country.population} key={country.name} />
           )
         })
       }
     </div>
   );
+  
 }
 
 export default App;

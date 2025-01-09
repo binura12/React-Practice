@@ -7,6 +7,7 @@
   width: fit-content;
   margin: 10px;
 }
+
 .user {
   background-color: skyblue;
   margin: 20px;
@@ -19,4 +20,8 @@
   margin: 20px;
   width: fit-content;
   padding: 20px;
+}
+
+.countryList{
+  display: inline-flex;
 }
