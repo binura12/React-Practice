@@ -7,7 +7,7 @@ function Product() {
 
     useEffect(()=>{
         console.log("Component Mounted");
-    })
+    },[])
 
     return (
         <div className="product">
