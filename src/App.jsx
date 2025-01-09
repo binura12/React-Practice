@@ -1,22 +1,11 @@
-import { useState } from "react";
 import "./App.css";
-import Product from "./Product";
+import Products from "./Products";
 function App() {
-  let [showProduct, setShowProduct] = useState(true);
 
   return (
     <div>
-
-      <h1>UseEffect Demo</h1>
-
-      <button onClick={()=>{
-        setShowProduct(!showProduct);
-      }}>Disable Product</button>
-
-      {
-        showProduct === true ? (<Product/>) : (null)
-      }
-
+      <h1>All Products</h1>
+      <Products/>
     </div>
   );
   

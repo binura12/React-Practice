@@ -1,5 +1,23 @@
-.product{
+.products{
   width: fit-content;
-  padding: 20px;
-  background-color: lightgray;
+  justify-content: center;
+  display: flex;
+  column-gap: 4%;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.product{
+  width: 20%;
+  background-color: skyblue;
+  padding: 10px;
+}
+
+.p-title{
+  font-size: 18px;
+}
+
+.p-image{
+  width: 100%;
+  height: 50%;
 }
