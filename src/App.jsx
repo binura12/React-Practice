@@ -21,7 +21,14 @@ function App() {
       <Product name="Iphone 11" price="85000/=" specs={{ram:"3GB",size:"19cm"}}/>
       <Product name="Iphone 14" price="285000" specs={{ram:"3GB",size:"19cm"}}/> */}
 
-      <Country name={countries[0].name} Capital={countries[0].Capital} population={countries[0].population}/>
+      {/* mapping logic */}
+      {
+        countries.map((country)=>{
+          return (
+            <Country name={country.name} Capital={country.Capital} population={country.population} key={country.name}/>
+          )
+        })
+      }
     </div>
   );
 }
