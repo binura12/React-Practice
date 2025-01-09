@@ -1,27 +1,5 @@
-#root {
-  max-width: 1280px;
-}
 .product{
-  padding: 20px;
-  background-color: gainsboro;
-  width: fit-content;
-  margin: 10px;
-}
-
-.user {
-  background-color: skyblue;
-  margin: 20px;
   width: fit-content;
   padding: 20px;
-}
-
-.country{
-  background-color: skyblue;
-  margin: 20px;
-  width: fit-content;
-  padding: 20px;
-}
-
-.countryList{
-  display: inline-flex;
+  background-color: lightgray;
 }
