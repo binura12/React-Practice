@@ -22,7 +22,7 @@ function Products() {
                     return (
                         <div className="product" key={product.id}>
                             <img className="p-image" src={product.image} alt="" />
-                            <h1 className="p-title">{product.title}</h1>
+                            <h2 className="p-title">{product.title}</h2>
                             <p>{product.price}</p>
                         </div>
                     )
