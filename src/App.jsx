@@ -2,37 +2,16 @@ import { useState } from "react";
 import "./App.css";
 function App() {
 
-  let [name, setName] = useState("John Doe");
-  let [animals, setAnimals] = useState(["Cat", "Dog", "Parrot"]);
+  let [name,setName] = useState("");
 
-  function addAnimals() {
-    setAnimals((prevArr)=>{
-      return[...prevArr,"Deer"];
-    })
+  function handleInput(event) {
+    setName(event.target.value);
   }
 
-  // when we calling the prvName it logging the previous value
-
-  function changeName() {
-    setName((prvName)=>{
-      return "Binura";
-    })
-  }
-
-  return(
-    <div>
+  return (
+    <div className="data-form">
+      <input type="text" onChange={handleInput} placeholder="Enter Name"/>
       <h1>{name}</h1>
-      <button onClick={changeName}>Change Name</button>
-
-      {
-        animals.map((animals, index)=>{
-          return (
-            <h2 key={index}>{animals}</h2>
-          )
-        })
-      }
-
-      <button onClick={(addAnimals)}>Add new Animal</button>
     </div>
   )
 }
