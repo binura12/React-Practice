@@ -6,8 +6,9 @@ function App() {
   let [animals, setAnimals] = useState(["Cat", "Dog", "Parrot"]);
 
   function addAnimals() {
-    let copyAnimal = [...animals, "Deer"];
-    setAnimals(copyAnimal);
+    setAnimals((prevArr)=>{
+      return[...prevArr,"Deer"];
+    })
   }
 
   // when we calling the prvName it logging the previous value
