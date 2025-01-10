@@ -1,14 +1,39 @@
+import { useState } from "react";
 import "./App.css";
-import Products from "./Products";
 function App() {
 
-  return (
+  let [name, setName] = useState("John Doe");
+  let [animals, setAnimals] = useState(["Cat", "Dog", "Parrot"]);
+
+  function addAnimals() {
+    let copyAnimal = [...animals, "Deer"];
+    setAnimals(copyAnimal);
+  }
+
+  // when we calling the prvName it logging the previous value
+
+  function changeName() {
+    setName((prvName)=>{
+      return "Binura";
+    })
+  }
+
+  return(
     <div>
-      <h1>All Products</h1>
-      <Products/>
+      <h1>{name}</h1>
+      <button onClick={changeName}>Change Name</button>
+
+      {
+        animals.map((animals, index)=>{
+          return (
+            <h2 key={index}>{animals}</h2>
+          )
+        })
+      }
+
+      <button onClick={(addAnimals)}>Add new Animal</button>
     </div>
-  );
-  
+  )
 }
 
 export default App;
