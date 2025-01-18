@@ -1,5 +1,30 @@
-.data-form{
-  background-color: lightgray;
+.about{
+  padding: 10px;
+  background-color: skyblue;
+}
+
+.product{
   padding: 20px;
-  width: fit-content;
+  background-color: lightgrey;
+  display: flex;
+  column-gap: 2%;
+}
+
+.prod{
+  width: 100%;
+  height: 100px;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+.service{
+  padding: 20px;
+  background-color: lightgrey;
+  display: flex;
+  column-gap: 2%;
+}
+.serv{
+  width: 100%;
+  height: 100px;
+  background-color: whitesmoke;
+  padding: 10px;
 }
