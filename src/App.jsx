@@ -1,38 +1,24 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import About from "./Components/About";
-import Product from "./Components/Product";
-import Service from "./Components/Service";
-import Home from "./Components/Home";
+import React from 'react'
+import './App.css'
+import Header from './Components/Header/Header'
+import Body from './Components/Body/Body'
+import Footer from './Components/Footer/Footer'
+
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <nav className="nav">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/product">Product</Link>
-            </li>
-            <li>
-              <Link to="/service">Service</Link>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/service" element={<Service />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <div id="wrapper">
+        <Header name="Home"/>
+        <Header name="About"/>
+        <Header name="Contact"/>
+        <Header name="Menu"/>
+        <Body>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, adipisci sint dolore iste animi optio laborum libero provident. Quibusdam eum voluptatem inventore ipsa numquam quaerat provident cumque, explicabo totam odit.</p>
+        </Body>
+        <Footer/>
+      </div>
+    </>
   )
 }
 
-export default App;
+export default App
